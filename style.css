@@ -1746,3 +1746,50 @@ section {
 /* --- CARD CODE FROM SOLUTIONS PAGE --- */
     /* Other responsive adjustments */
 
+
+/*--------------------------------------------------------------
+# Reference Page
+--------------------------------------------------------------*/
+#hero {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 90vh; /* Set height to full viewport height */
+    margin-bottom: 30px; /* Add margin below the hero section */
+}
+
+#hero h3 {
+    color: white;
+    font-size: 30px;
+}
+
+.references {
+    text-align: center; /* Center-align text within the references section */
+}
+
+.work-log {
+    display: flex;
+    justify-content: center; /* Center-align flex items horizontally within the work-log section */
+    align-items: center; /* Center-align flex items vertically within the work-log section */
+    height: 100px; /* Adjust the height as needed */
+}
+.references ul {
+    list-style-position: inside; /* Position the bullet points inside the list items */
+    padding-left: 0; /* Remove default padding to prevent misalignment */
+}
+
+.references li {
+    list-style-type: none; /* Hide the bullet point */
+}
+.pdf-icon{
+    font-size: 3vw;
+}
+.work-log-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.work-log-title h4 {
+    margin-bottom: 20px; /* Add margin below the h4 element */
+}
