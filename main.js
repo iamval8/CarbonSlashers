@@ -169,17 +169,21 @@
     /**
      * Skills animation
      */
-    let skilsContent = select('.skills-content');
-    if (skilsContent) {
+    let skillsContent = select('.skills-content');
+    if (skillsContent) {
         new Waypoint({
-            element: skilsContent,
+            element: skillsContent,
             offset: '80%',
             handler: function(direction) {
                 let progress = select('.progress .progress-bar', true);
                 progress.forEach((el) => {
-                    el.style.width = el.getAttribute('aria-valuenow') + '%'
+                    let value = parseFloat(el.getAttribute('aria-valuenow'));
+                    let max = parseFloat(el.getAttribute('aria-valuemax'));
+                    let percentage = (value / max) * 100;
+                    el.style.width = percentage + '%';
                 });
             }
+
         })
     }
 
@@ -282,3 +286,115 @@ document.addEventListener('scroll', addAnimationClass);
 addAnimationClass();
 
 //CODE FOR ANIMATION ON CARDS
+
+
+/*
+  ANIMATED GRAPH
+ */
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Sample data for the first part
+    const initialData = [
+        { year: 1997 , capacity: 4 },
+        { year: 1998 , capacity: 5 },
+        { year: 1999 , capacity: 7 },
+        { year: 2000 , capacity: 8 },
+        { year: 2001 , capacity: 9 },
+        { year: 2002 , capacity: 10 },
+        { year: 2003 , capacity: 11 },
+        { year: 2004, capacity: 13 },
+        { year: 2005, capacity: 14 },
+        { year: 2006, capacity: 17 },
+        { year: 2007, capacity: 22 },
+        { year: 2008, capacity: 30 },
+        { year: 2009, capacity: 35 },
+        { year: 2010, capacity: 50 },
+        { year: 2011, capacity: 85 },
+        { year: 2012, capacity: 110 },
+        { year: 2013, capacity: 150 },
+        { year: 2014, capacity: 195 },
+        { year: 2015, capacity: 220 },
+        { year: 2016, capacity: 280 },
+        { year: 2017, capacity: 330 },
+        { year: 2018, capacity: 390 },
+        { year: 2019, capacity: 415 },
+        { year: 2020, capacity: 445 },
+        { year: 2021, capacity: 455 },
+        { year: 2022, capacity: 480 }
+    ];
+
+    // Chart container
+    const chart = document.querySelector('.chart');
+    const xAxis = document.querySelector('.x-axis');
+    const yAxis = document.querySelector('.y-axis');
+
+    // Loop through initial data to create bars and x-axis labels
+    initialData.forEach(entry => {
+        const bar = document.createElement('div');
+        bar.classList.add('bar');
+        bar.style.height = '0'; // Set initial height to 0
+        bar.dataset.height = entry.capacity;
+        chart.appendChild(bar);
+
+        const label = document.createElement('span');
+        label.textContent = entry.year;
+        xAxis.appendChild(label);
+
+        // Add some spacing between x-axis labels
+        label.style.marginRight = '4px'; // Adjust as needed
+    });
+
+    // Animate the initial graph after adding data
+    animateGraph();
+
+    // Calculate the maximum value on the y-axis
+    const maxYValue = Math.max(...initialData.map(entry => entry.capacity));
+
+    // Add labels to the y-axis
+    const yLabels = [0, 100, 200, 300, 400, 500];
+    yLabels.forEach(value => {
+        const yLabel = document.createElement('span');
+        yLabel.textContent = value;
+        yLabel.classList.add('y-axis-value');
+        yAxis.appendChild(yLabel);
+
+        // Calculate the relative position of the label based on its value
+        const relativePosition = (maxYValue - value) / maxYValue * 100;
+        yLabel.style.bottom = `${relativePosition}%`;
+    });
+
+    // Add label for the y-axis
+    const yLabelDescription = document.createElement('span');
+    yLabelDescription.textContent = 'Number of Projects';
+    yLabelDescription.classList.add('y-axis-title');
+    yAxis.appendChild(yLabelDescription);
+});
+
+
+function animateGraph() {
+    const bars = document.querySelectorAll('.bar');
+    const trendLine = document.querySelector('.trend-line');
+    let delay = 0;
+
+    bars.forEach((bar, index) => {
+        setTimeout(() => {
+            bar.style.height = bar.dataset.height + 'px';
+            bar.style.transition = `height 1s ease-in-out ${index * 0.001}s`;
+            bar.style.height = bar.dataset.height + 'px';
+
+        }, delay);
+        delay += 100; // Adjust animation speed if needed
+
+    });
+
+    setTimeout(() => {
+        trendLine.style.opacity = '1';
+    }, bars.length * 100); // Adjust delay to start trend line animation
+}
+
+// JavaScript
+document.addEventListener("DOMContentLoaded", function() {
+    animateGraph();
+});
+
+

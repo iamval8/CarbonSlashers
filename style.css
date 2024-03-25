@@ -638,7 +638,7 @@ section {
 .why-us .content h3 {
     font-weight: 400;
     font-size: 34px;
-    color: #3a6e40;
+    color: #310e0c;;
 }
 
 .why-us .content h4 {
@@ -760,10 +760,11 @@ section {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+
 .skills .content h3 {
     font-weight: 700;
     font-size: 32px;
-    color: #3a6e40;
+    color: #310e0c;
     font-family: "Poppins", sans-serif;
 }
 
@@ -814,10 +815,10 @@ section {
 }
 
 .skills .progress-bar {
-    width: 1px;
-    height: 10px;
+    width: 0; /* Initialize width to 0 */
+    height: 100%;
+    background-color:#47874f;
     transition: 0.9s;
-    background-color: #47874f;
 }
 
 /*--------------------------------------------------------------
@@ -857,7 +858,7 @@ section {
     margin-bottom: 0;
 }
 
-.services-home.icon-box:hover {
+.services-home .icon-box:hover {
     transform: translateY(-10px);
 }
 
@@ -1062,7 +1063,6 @@ section {
     padding: 12px 35px;
     border-radius: 50px;
     color: #3dd27c;
-    transition: none;
     font-size: 16px;
     font-weight: 500;
     font-family: "Jost", sans-serif;
@@ -1453,185 +1453,155 @@ section {
 
 
 
-    @media (max-width: 768px) {
-        #footer .footer-bottom {
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-
-        #footer .copyright,
-        #footer .credits {
-            text-align: center;
-            float: none;
-        }
-
-        #footer .credits {
-            padding-top: 4px;
-        }
+@media (max-width: 768px) {
+    #footer .footer-bottom {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    /*--------------------------------------------------------------
-    # About Us Page
-    --------------------------------------------------------------*/
-
-    #hero {
-        display: flex;
-        justify-content: center; /* Horizontally center content */
-        align-items: center; /* Vertically center content */
-        height: 95vh; /* Set height to full viewport height */
+    #footer .copyright,
+    #footer .credits {
+        text-align: center;
+        float: none;
     }
-
-    #hero h3 {
-        color: white;
-        font-size: 30px;
+    #footer .credits {
+        padding-top: 4px;
     }
+} /*--------------------------------------------------------------
+   # About Us Page
+   --------------------------------------------------------------*/
+#hero {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 95vh; /* Set height to full viewport height */
+}
 
-    .about-us {
-        display: flex;
-        flex-direction: column; /* Align items vertically */
-        justify-content: center; /* Horizontally center content */
-        align-items: center; /* Vertically center content */
-        text-align: center; /* Center text horizontally */
-        padding: 150px 5vw 150px; /* Adjust padding as needed */
-    }
+#hero h3 {
+    color: white;
+    font-size: 30px;
+}
 
-    .goals {
-        display: flex;
-        flex-direction: column; /* Align items vertically */
-        justify-content: center; /* Horizontally center content */
-        align-items: center; /* Vertically center content */
-        text-align: center; /* Center text horizontally */
-        padding: 175px 7vw; /* Adjust padding as needed */
-        background-color: #310e0b;
-    }
+.about-us {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    text-align: center; /* Center text horizontally */
+    padding: 150px 5vw 150px; /* Adjust padding as needed */
+}
 
+.goals {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    text-align: center; /* Center text horizontally */
+    padding: 175px 7vw; /* Adjust padding as needed */
+    background-color: #310e0b;
+}
 
+.goals-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
 
-
-    .goals-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: white;
-    }
-
-    .goals-list {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+.goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     }
 
-    .goal-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+.goal-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-    .goal-item i {
-        font-size: 24px;
-    }
+.goal-item i {
+    font-size: 24px;
+}
 
-    .goal-item h3 {
-        margin: 0;
-    }
+.goal-item h3 {
+    margin: 0;
+}
 
-    .goal-item p {
-        margin: 0;
-    }
+.goal-item p {
+    margin: 0;
+}
 
     /* -----VALUES------- */
 
-    .values {
-        display: flex;
-        justify-content: center;
-        padding: 125px 5vw;
-        background-color: #ece8e5;
-    }
 
+.values-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.values-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.value-cloud {
+    max-width: 500px;
+    max-height: 400px;
+    background-image: url('assets/img/empty-cloud.png'); /* Add your cloud image path */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 65px;
+    text-align: center;
+    margin-right: 20px; /* Increase the right margin */
+    margin-bottom: 20px; /* Increase the bottom margin */
+    transition: all ease-in-out 0.6s;
+}
+
+.value-cloud span.material-symbols-outlined {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.value-cloud h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #47874f;
+}
+.value-icon{
+    color: #47874f;
+}
+.value-cloud p {
+    font-size: 16px;
+}
+
+.value-cloud .source-link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: green;
+    text-decoration: underline;
+}
+
+/* Media query to adjust spacing on smaller screens */
+@media (max-width: 1350px) {
     .values-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start; /* Align items to the start */
-        width: 80%; /* Adjust the width as needed */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .values-heading {
-        margin-left: 30px; /* Add separation between heading and boxes */
+    .value-cloud {
+        margin-bottom: 20px; /* Increase the bottom margin */
     }
-
-    .values-item {
-        flex: 1; /* Make all items take equal space */
-        display: flex;
-        justify-content: center;
-    }
+}
+.values .value-cloud:hover {
+    transform: translateY(-20px);
+}
 
 
-    .value-box {
-        width: 100%; /* Make all boxes the same width */
-        max-width: 300px; /* Set max-width to prevent excessive stretching */
-        max-height: 400px; /* Add max-height for the boxes */
-        overflow: hidden; /* Hide overflow content */
-        background-color: #fff;
-        margin-bottom: 15px; /* Add separation between boxes */
-        margin-right: 4vw;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 30px 30px;
-        animation: fadeUp 0.5s ease-in-out forwards; /* Apply the animation */
-        opacity: 0; /* Initially hide value-boxes */
-        justify-content:center;
-    }
-
-    /* Define the animation */
-    @keyframes fadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Apply the animation when the element has the animate-fade-up class */
-    .animate-fade-up {
-        animation: fadeUp 0.5s ease-in-out forwards;
-    }
-
-    /* Adjust the delay for each value-box */
-    .value-box:nth-child(1) {
-        animation-delay: 0.3s;
-    }
-
-    .value-box:nth-child(2) {
-        animation-delay: 0.4s;
-    }
-
-    .value-box:nth-child(3) {
-        animation-delay: 0.5s;
-    }
-
-
-    .value-box:hover {
-        transform: translateY(-10px);
-    }
-
-    .value-box:hover h4 a {
-        color: #3dd27c;
-    }
-
-    .value-box i {
-        font-size: 24px;
-    }
-
-    .value-box h3 {
-        margin: 10px 0;
-    }
-
-    .value-box p {
-        margin: 0;
-    }
 
     /* ---------VIDEO BACKGROUND ----------- */
 
@@ -1780,4 +1750,126 @@ section {
     display: block;
     width: 100%;
     height: auto;
+}
+
+/*--------------------------------------------------------------
+# Timeline Graphic
+--------------------------------------------------------------*/
+
+#timeline-graphic {
+    padding: 100px 100px;
+}
+
+.y-axis {
+    position: absolute;
+    right: -120px; /* Adjust this value as needed */
+    top: 50%; /* Align vertically in the middle */
+    transform: translateY(-50%); /* Center vertically */
+    display: flex;
+    flex-direction: column-reverse; /* Display labels from bottom to top */
+}
+
+.y-axis-value {
+    margin-right: 20px; /* Adjust margin for separation */
+}
+
+.y-axis-title {
+    transform: rotate(-90deg); /* Rotate title vertically */
+    transform-origin: 10% 10%; /* Set rotation origin */
+    margin-left: 30px;
+}
+
+
+.timeline-chart {
+    margin-left: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar {
+    width: 30px; /* Adjust as needed */
+    background-color: #3a6e40; /* Adjust bar color */
+    margin-right: 10px;
+    float: left;
+}
+
+.trend-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px dashed #47874f; /* Adjust trend line color */
+}
+
+.x-axis {
+    margin-top: 10px;
+    clear: both;
+}
+/*--------------------------------------------------------------
+# Tax Rebates section in home page
+--------------------------------------------------------------*/
+#tax-rebates .section-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#tax-rebates .section-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #310e0c;
+}
+#tax-rebates .section-content b{
+    color: #47874f;
+}
+
+#tax-rebates .section-content .btn-primary {
+    background-color: #47874f;
+    border-radius: 20px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+#tax-rebates .section-content .btn-primary:hover {
+    background-color: #2e5e31; /* Darker green color */
+    animation: pulse 0.5s infinite alternate; /* Add pulse animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+#tax-rebates .section-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#tax-rebates .section-image img {
+    max-width: 100%;
+    height: auto;
+}
+.section-image {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    right: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+
+.image-caption a {
+    color: green;
+    text-decoration: underline;
 }
