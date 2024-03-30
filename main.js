@@ -398,3 +398,136 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// JavaScript for handling the carousel functionality
+
+document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector('.mission-section .carousel');
+    const slides = Array.from(document.querySelectorAll('.mission-section .slide'));
+    const totalSlides = slides.length;
+    const slideWidth = slides[0].offsetWidth;
+    let currentIndex = 0;
+    let interval;
+
+    function updateSlideSize() {
+        const currentSlide = slides[currentIndex];
+        carousel.style.height = `${currentSlide.offsetHeight}px`;
+    }
+
+    // function updateSlideWidth() {
+    //     const slideWidth = slides[0].offsetWidth;
+    //     carousel.style.width = `${slideWidth * slides.length}px`;
+    //     goToSlide(currentIndex);
+    // }
+
+    function goToSlide(index) {
+        const slideWidth = slides[0].offsetWidth;
+        carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentIndex = index;
+        updateDots();
+    }
+
+    // Update slide size when the window is resized
+    window.addEventListener('resize', function() {
+        updateSlideSize();
+    });
+
+
+
+    function updateDots() {
+        const dots = document.querySelectorAll('.mission-section .carousel-dots .dot');
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function goToNextSlide() {
+        if (currentIndex === totalSlides - 1) {
+            goToSlide(0);
+        } else {
+            goToSlide(currentIndex + 1);
+        }
+    }
+
+    function goToPrevSlide() {
+        if (currentIndex === 0) {
+            goToSlide(totalSlides - 1);
+        } else {
+            goToSlide(currentIndex - 1);
+        }
+    }
+
+    function startCarousel() {
+        interval = setInterval(goToNextSlide, 3000); // Change slide every 5 seconds
+    }
+
+    function stopCarousel() {
+        clearInterval(interval);
+    }
+
+    // Add event listeners for arrow clicks
+    const prevButton = document.querySelector('.mission-section .prev');
+    const nextButton = document.querySelector('.mission-section .next');
+    prevButton.addEventListener('click', function() {
+        goToPrevSlide();
+        stopCarousel();
+    });
+
+    nextButton.addEventListener('click', function() {
+        goToNextSlide();
+        stopCarousel();
+    });
+
+    // Add event listeners for dots
+    const dots = document.querySelectorAll('.mission-section .carousel-dots .dot');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            goToSlide(index);
+            stopCarousel();
+        });
+    });
+
+    // Start carousel automatically
+    startCarousel();
+
+});
+function updateDots() {
+    const dots = document.querySelectorAll('.mission-section .carousel-dots .dot');
+    dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+
+//Solutions page code
+
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButtons = document.querySelectorAll(".toggle-description");
+
+    toggleButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const solutionBox = this.closest('.solution-box'); // Find the closest .solution-box container
+            const image = solutionBox.querySelector('.solution-image'); // Query the image element within the solution box
+            const description = solutionBox.querySelector('.description'); // Query the description element within the solution box
+
+            // Toggle between displaying the image and the description
+            if (image.style.display !== "none") {
+                image.style.display = "none";
+                description.style.display = "block";
+                this.textContent = "× More"; // Change button text to "×" when description is shown
+            } else {
+                image.style.display = "block";
+                description.style.display = "none";
+                this.textContent = "+ More"; // Change button text to "+" when image is shown
+            }
+        });
+    });
+});
+

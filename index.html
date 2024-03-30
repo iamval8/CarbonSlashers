@@ -71,32 +71,70 @@
 </header><!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                <h1>Embracing Green, Empowering Homes</h1>
-                <h3>
-                    Dedicated students assisting homeowners in eco-friendly homes. </h3>
-                <div class="d-flex justify-content-center justify-content-lg-start">
-                    <a href="#contact" class="btn-get-started scrollto">Get Started</a>
-                    <!--<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>-->
-                    <!--- THIS IS A VIDEO TAG ---- <video width="320" height="240" controls>
-                        <source src="https://www.youtube.com/watch?v=jDDaplaOz7Q" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video> --->
+                         <!--data-1250                             data-2050 -->
+    <section id="hero" class="d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                    <h1>Embracing Green, Empowering Homes</h1>
+                    <h3>
+                        Dedicated students assisting homeowners in eco-friendly homes. </h3>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/img/EcoHomeGreenRenewableEnergy.png" class="img-fluid animated" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-                <img src="assets/img/EcoHomeGreenRenewableEnergy.png" class="img-fluid animated" alt="">
+        </div>
+
+    </section><!-- End Hero -->
+
+
+<div class="mission-section">
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide active">
+                <div class="overlay"></div>
+                <img src="assets/img/solar-energy-home.jpg" alt="Solar Energy">
+                <div class="mission-word word-1 active">
+                    <strong><u>Sustainable</u></strong>
+                    <h4>We Want to</h4>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="overlay"></div>
+                <img src="assets/img/wind-energy-home.jpg" alt="Wind Energy">
+                <div class="mission-word word-2 active">
+                    <strong><u>Home</u></strong>
+                    <h4><b>Slash</b> the Worlds</h4>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="overlay"></div>
+                <img src="assets/img/sustainable-home-model.jpg" alt="Geothermal Energy">
+                <div class="mission-word word-3 active">
+                    <strong><u>Solutions</u></strong>
+                    <h4>Carbon Footprint!</h4>
+                </div>
             </div>
         </div>
+        <div class="carousel-controls">
+            <div class="prev" onclick="prevSlide()">&lt;</div>
+            <div class="next" onclick="nextSlide()">&gt;</div>
+        </div>
     </div>
+    <div class="carousel-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
 
-</section><!-- End Hero -->
 
-    <!-- ======= About Us Section ======= -->
+
+
+    <!-- ======= About Us Section =======
     <section id="about" class="about">
         <div class="container" data-aos="fade-up">
 
@@ -106,7 +144,7 @@
 
             <div class="row content">
                 <div class="col-md-8 offset-md-2 text-center">
-                    <!-- Center the content with "col-md-6" and "offset-md-3" -->
+                     Center the content with "col-md-6" and "offset-md-3"
                     <h6>
                         <b>Green energy initiatives are important to reduce the negative effects of fossil-fuels on the environment.</b>
                     </h6>
@@ -124,7 +162,7 @@
             </div>
 
         </div>
-    </section><!-- End About Us Section -->
+    </section> End About Us Section -->
 
     <!-- Values Section  THIS SECTION DOESN'T WORK!!! IDK WHY?!! UGHHHH--->
 <section class="values section-bg">
@@ -526,7 +564,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-lg-left text-center">
-                    <p>&copy; 2024 Carbon Cutters. All Rights Reserved</p>
+                    <p>&copy; 2024 Carbon Slashers. All Rights Reserved</p>
                 </div>
                 <div class="col-lg-6 text-lg-right text-center">
                     <p>Developed by 4 awesome students!</a></p>
@@ -551,6 +589,13 @@
 <!--Main JS File -->
 <script src="main.js"></script>
 
+
+<script type="text/javascript" src="forms/skrollr.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+</script>
+<!-- Add Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>
