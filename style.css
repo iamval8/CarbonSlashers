@@ -1951,10 +1951,18 @@ section {
 
 }
 
+/*.mission-section img {
+    width: 100%; /* Adjust the width as needed
+    height: auto; /* Maintain aspect ratio
+    max-height: 700px;
+}*/
 
-.mission-section img {
-    width: 100%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+/* .car-bgk{
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    width: 100%;
+    height: auto;
     max-height: 700px;
 }
 
@@ -1964,23 +1972,33 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
 }
 
-.mission-section .mission-word {
-    text-align: center;
+.mission-word {
     position: absolute;
-    bottom: 20px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-100%);
-    font-size: 62px;
+    transform: translate(-50%, -50%);
+    font-size: 6vw; /* Using viewport width for responsive font size */
     color: #3dd27c;
+    text-align: center;
 }
 
-.mission-word h4 {
-    margin: 0;
-    font-size: 32px;
+@media (min-width: 768px) {
+    .mission-word {
+        font-size: 5vw; /* Adjust font size for larger screens */
+        top: 50%;
+    }
 }
+
+@media (min-width: 1200px) {
+    .mission-word {
+        font-size: 5vw; /* Adjust font size for even larger screens */
+        top: 50%;
+    }
+}
+
 
 .mission-section .mission-word.active {
     display: block;
