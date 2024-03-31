@@ -1955,6 +1955,7 @@ section {
 .mission-section img {
     width: 100%; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
+    max-height: 700px;
 }
 
 .mission-section .overlay {
