@@ -2131,3 +2131,18 @@ section {
         padding: 5%;
     }
 }
+
+/*
+==================WAVE==================
+*/
+.wave-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -300px;
+}
+
+.wave-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
