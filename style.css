@@ -1,3 +1,10 @@
+/* Colors */
+:root {
+    --color-default: #3a6e40;
+    --color-primary: #65cd99;
+    --color-secondary:#ece8e5;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     color: #444444;
@@ -2145,4 +2152,62 @@ section {
     display: block;
     width: 100%;
     height: auto;
+}
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions Section
+--------------------------------------------------------------*/
+.faq {
+    padding-top: 80px;
+}
+
+.faq .accordion-item {
+    border: 0;
+    margin-bottom: 10px;
+}
+
+.faq .accordion-collapse {
+    border: 0;
+}
+
+.faq .accordion-button {
+    padding: 15px 30px 20px 60px;
+    font-weight: 600;
+    border: 0;
+    font-size: 18px;
+    color: var(--color-default);
+    text-align: left;
+    background: rgba(14, 29, 52, 0.03);
+    border-radius: 5px;
+}
+
+.faq .accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq .accordion-button:not(.collapsed) {
+    color: var(--color-primary);
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+.faq .question-icon {
+    position: absolute;
+    top: 14px;
+    left: 25px;
+    font-size: 20px;
+    color: var(--color-primary);
+}
+
+.faq .accordion-button:after {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.faq .accordion-body {
+    padding: 0 30px 25px 60px;
+    border: 0;
+    background: rgba(14, 29, 52, 0.03);
+    border-radius: 5px;
 }
