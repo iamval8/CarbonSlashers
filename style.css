@@ -1932,6 +1932,9 @@ section {
     width: 100%;
     overflow: hidden;
     margin: 0;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100%; /* Ensure the container takes up the full height */
 }
 
 .mission-section .carousel {
@@ -1947,7 +1950,10 @@ section {
 .mission-section .slide img {
     width: 100%;
     height: auto;
-
+    object-fit: cover; /* This property is used for covering the entire container with the image */
+    object-position: center; /* This property is used to position the image at the center */
+    background-repeat: no-repeat; /* This property is used for preventing image repetition */
+    max-height: 700px;
 }
 
 /*.mission-section img {
@@ -1963,7 +1969,7 @@ section {
     width: 100%;
     height: auto;
     max-height: 700px;
-}
+} */
 
 .mission-section .overlay {
     position: absolute;
