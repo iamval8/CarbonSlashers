@@ -591,6 +591,11 @@ section {
 .section-title p {
     margin-bottom: 0;
 }
+.section-header h2{
+    color: #46834d;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
@@ -1714,15 +1719,17 @@ section {
     justify-content: center; /* Horizontally center content */
     align-items: center; /* Vertically center content */
     height: 80vh; /* Set height to full viewport height */
-    margin-bottom: 30px; /* Add margin below the hero section */
     width: 100%;
     background: rgb(70, 132, 77);
     color: white;
 }
 
-#hero h3 {
-    color: white;
-    font-size: 30px;
+#hero-reference h1 {
+    margin: 0 0 10px 0;
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
 }
 
 .references {
@@ -1733,7 +1740,7 @@ section {
     display: flex;
     justify-content: center; /* Center-align flex items horizontally within the work-log section */
     align-items: center; /* Center-align flex items vertically within the work-log section */
-    height: 100px; /* Adjust the height as needed */
+    height: auto; /* Adjust the height as needed */
 }
 .references ul {
     list-style-position: inside; /* Position the bullet points inside the list items */
@@ -1744,7 +1751,7 @@ section {
     list-style-type: none; /* Hide the bullet point */
 }
 .pdf-icon{
-    font-size: 3vw;
+    font-size: 3em;
     padding-bottom: 20px;
 }
 .work-log-title {
@@ -1754,9 +1761,11 @@ section {
 
 }
 .work-log-title h4 {
-    margin-bottom: 20px; /* Add margin below the h4 element */
+    margin-bottom: 30px; /* Add margin below the h4 element */
+    font-size: 2em;
 }
 .pdf-icon i {
+    font-size: 2em;
     color: #46844d; /* Initial color */
     transition: color 0.3s ease; /* Smooth transition for color change */
 }
@@ -2210,4 +2219,15 @@ section {
     border: 0;
     background: rgba(14, 29, 52, 0.03);
     border-radius: 5px;
+}
+/* WAVE ATTEMPT 2*/
+.spacer{
+    aspect-ratio: 900/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.layer1{
+    background-image: url('assets/img/layered-waves-haikei.svg');
 }
