@@ -410,20 +410,6 @@ h6 {
     font-size: 24px;
 }
 
-#hero .btn-get-started {
-    font-family: "Jost", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 28px 11px 28px;
-    border-radius: 50px;
-    transition: 0.5s;
-    margin: 10px 0 0 0;
-    color: #fff;
-    background: #310e0c;
-    /*background: rgb(101, 205, 153);*/
-}
 
 #hero .btn-get-started:hover {
     background: rgba(49, 14, 12, 0.68)
@@ -534,6 +520,119 @@ h6 {
 
 @media (max-width: 575px) {
     #hero .hero-img img {
+        width: 100%; /* Adjust the width as needed */
+    }
+}
+
+/*--------------------------------------------------------------
+# Hero for secondary pages Section
+--------------------------------------------------------------*/
+#hero-2 {
+    width: 100%;
+    height: 80vh;
+    background: rgb(70, 132, 77);
+}
+
+#hero-2 .container {
+    padding-top: 72px;
+}
+
+#hero-2 h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+
+#hero-2 h2 {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+#hero-2 .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 991px) {
+    #hero-2 {
+        height: 100vh;
+        text-align: center;
+    }
+
+    #hero-2 .animated {
+        animation: none;
+    }
+
+    #hero-2 .hero-img {
+        text-align: center;
+    }
+
+    #hero-2 .hero-img img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero-2 h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #hero-2 h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    #hero-2 .hero-img img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    #hero-2 .hero-img img {
+        width: 80%;
+    }
+
+    #hero-2 .btn-get-started {
+        font-size: 16px;
+        padding: 10px 24px 11px 24px;
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/*making the image in solution page hero bigger code*/
+@media (min-width: 992px) {
+    #hero-2 .hero-img img {
+        width: 120%; /* Adjust the width as needed */
+    }
+}
+
+@media (max-width: 991px) {
+    #hero-2 .hero-img img {
+        width: 70%; /* Adjust the width as needed */
+    }
+}
+
+@media (max-width: 768px) {
+    #hero-2 .hero-img img {
+        width: 90%; /* Adjust the width as needed */
+    }
+}
+
+@media (max-width: 575px) {
+    #hero-2 .hero-img img {
         width: 100%; /* Adjust the width as needed */
     }
 }
@@ -1714,6 +1813,47 @@ section {
 /*--------------------------------------------------------------
 # Reference Page
 --------------------------------------------------------------*/
+/*#hero-reference {*/
+/*    width: 100%;*/
+/*    height: 80vh;*/
+/*    background: rgb(70, 132, 77);*/
+/*    color: white;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*#hero-reference h1 {*/
+/*    font-size: 48px;*/
+/*    font-weight: 700;*/
+/*    line-height: 1.2;*/
+/*    color: #fff;*/
+/*    !*margin: 0 0 30px;!* Adjust vertical spacing *!*!*/
+/*}*/
+
+/*.smaller-image {*/
+/*    max-width: 400px; !* Adjust the maximum width of the image *!*/
+/*    height: auto;*/
+/*    margin-left: auto; !* Align image to the right *!*/
+/*    margin-top: 20px; !* Adjust vertical spacing *!*/
+/*}*/
+
+/*@media (max-width: 767px) {*/
+/*    #hero-reference {*/
+/*        height: auto; !* Adjust height for smaller screens *!*/
+/*        padding: 20px;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .smaller-image {*/
+/*        max-width: 80%; !* Adjust the maximum width of the image for smaller screens *!*/
+/*        margin: 20px auto; !* Center-align image *!*/
+/*    }*/
+/*}*/
+
+
+/*.references {*/
+/*    text-align: center; !* Center-align text within the references section *!*/
+/*}*/
 #hero-reference {
     display: flex;
     justify-content: center; /* Horizontally center content */
@@ -1726,15 +1866,16 @@ section {
 
 #hero-reference h1 {
     margin: 0 0 10px 0;
-    font-size: 5em;
+    font-size: 48px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 56px;
     color: #fff;
 }
 
 .references {
     text-align: center; /* Center-align text within the references section */
 }
+
 
 .work-log {
     display: flex;

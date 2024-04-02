@@ -461,7 +461,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function startCarousel() {
-        interval = setInterval(goToNextSlide, 3000); // Change slide every 5 seconds
+        interval = setInterval(goToNextSlide, 3500); // Change slide every 5 seconds
     }
 
     function stopCarousel() {
